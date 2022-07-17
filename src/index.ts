@@ -29,9 +29,10 @@ export const configs: {
   colors: ColorMap;
   weights: WeightMap;
   levelHint: LevelHint;
+  moduleColor: string;
 } = {
   colors: {
-    debug: '#aaa',
+    debug: '#3cc',
     info: '#383',
     warn: '#c83',
     error: '#c33',
@@ -43,6 +44,7 @@ export const configs: {
     error: 400,
   },
   levelHint: (level: Levels) => padEnd(`[${level}]`, 7),
+  moduleColor: '#aaa',
 };
 
 export function emojiHint(level: Levels): string {
@@ -59,7 +61,7 @@ function bindLogger(level: Levels, module: string) {
     console,
     '%c' + configs.levelHint(level) + `  %c${padStart(module, 12)}  `,
     `color: ${configs.colors[level]}; font-weight: ${configs.weights[level]};`,
-    `color: ${configs.colors[level]}; font-weight: ${configs.weights[level]};`,
+    `color: ${configs.moduleColor}; font-weight: 400;`,
   );
 }
 
