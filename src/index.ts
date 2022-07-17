@@ -21,7 +21,7 @@ export type WeightMap = {
   error: number;
 }
 
-export type LevelHint = (Levels) => string;
+export type LevelHint = (level: Levels) => string;
 
 export type Levels = 'debug' | 'info' | 'warn' | 'error';
 
