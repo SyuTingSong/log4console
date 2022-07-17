@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "lib/esm",
+    "rootDir": "src",
+    "lib": ["ES2020", "DOM"],
+    "module": "ESNext",
+    "target": "ES2017",
+    "declaration": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true,
+  "include": ["src/"],
+  "exclude": ["node_modules"]
+}
