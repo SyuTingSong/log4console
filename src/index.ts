@@ -57,7 +57,7 @@ export function emojiHint(level: Levels): string {
 function bindLogger(level: Levels, module: string) {
   return console[level].bind(
     console,
-    '%c' + configs.levelHint(level) + `%c${padStart(module, 12)}`,
+    '%c' + configs.levelHint(level) + `  %c${padStart(module, 12)}  `,
     `color: ${configs.colors[level]}; font-weight: ${configs.weights[level]};`,
     `color: ${configs.colors[level]}; font-weight: ${configs.weights[level]};`,
   );
